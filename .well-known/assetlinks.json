@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "app.web.zelzele",
+      "sha256_cert_fingerprints": [
+        "2E:DB:46:45:18:33:74:37:19:F3:49:E3:0E:68:1E:BC:EC:E5:4B:84:52:11:85:A6:98:96:62:BE:89:D1:A9:AD"
+      ]
+    }
+  }
+]
