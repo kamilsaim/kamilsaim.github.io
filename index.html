@@ -1,9 +1,173 @@
 <!doctype html>
+<html lang="tr">
+<head>
 <meta charset="utf-8">
-<title>kamilsaim</title>
-<meta name="robots" content="noindex">
-<h1>kamilsaim</h1>
-<p>Bu adres proje sayfalarinin kokudur.</p>
-<ul>
-  <li><a href="/zelzele/">Zelzele — Turkiye Deprem Haritasi</a></li>
-</ul>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kamil Saim — Uygulamalar</title>
+<meta name="description" content="Kamil Saim'in geliştirdiği web uygulamaları: Beş Vakit, Zelzele, Türbedar, Borç Defteri, Bereket ve daha fazlası.">
+<meta name="theme-color" content="#f6f3ec" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#14171a" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/webp" href="ikonlar/besvakit.webp">
+<style>
+  :root {
+    --bg: #f6f3ec;
+    --card: #ffffff;
+    --ink: #1d2320;
+    --muted: #68716b;
+    --line: #e6e1d6;
+    --accent: #1f6b4f;
+    --tag: #eef3ef;
+    --shadow: 0 1px 2px rgba(30, 35, 32, .06), 0 6px 20px rgba(30, 35, 32, .06);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14171a;
+      --card: #1c2024;
+      --ink: #eceee9;
+      --muted: #9aa39d;
+      --line: #2a3035;
+      --accent: #6fc39d;
+      --tag: #22302a;
+      --shadow: 0 1px 2px rgba(0, 0, 0, .3);
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  main {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: max(40px, env(safe-area-inset-top)) 16px 48px;
+  }
+  header { margin-bottom: 36px; }
+  h1 {
+    margin: 0 0 6px;
+    font-size: clamp(28px, 5vw, 40px);
+    letter-spacing: -.02em;
+    line-height: 1.15;
+  }
+  header p { margin: 0; color: var(--muted); max-width: 52ch; }
+  h2 {
+    margin: 36px 0 14px;
+    font-size: 13px;
+    font-weight: 650;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .app {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    height: 100%;
+    padding: 14px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+    color: inherit;
+    text-decoration: none;
+    transition: transform .15s ease, border-color .15s ease;
+  }
+  .app:hover { transform: translateY(-2px); border-color: var(--accent); }
+  .app:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+  .app img {
+    flex: none;
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    object-fit: cover;
+    background: #fff;
+  }
+  .app div { min-width: 0; overflow-wrap: anywhere; }
+  .app strong { display: block; font-size: 16.5px; line-height: 1.3; }
+  .app span { display: block; color: var(--muted); font-size: 14px; line-height: 1.4; margin-top: 2px; }
+  .app em {
+    display: inline-block;
+    margin-top: 6px;
+    padding: 1px 8px;
+    border-radius: 99px;
+    background: var(--tag);
+    color: var(--accent);
+    font-size: 12px;
+    font-style: normal;
+  }
+  footer {
+    margin-top: 48px;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 14px;
+  }
+  footer a { color: var(--accent); }
+  @media (prefers-reduced-motion: reduce) { .app { transition: none; } }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Kamil Saim</h1>
+    <p>Geliştirdiğim web uygulamaları. Hepsi tarayıcıda açılır; çoğunu telefonunuzun ana ekranına ekleyip uygulama gibi kullanabilirsiniz.</p>
+  </header>
+
+  <h2>İbadet ve maneviyat</h2>
+  <ul class="grid">
+    <li><a class="app" href="/besvakit/"><img src="ikonlar/besvakit.webp" alt="" width="64" height="64"><div><strong>Beş Vakit</strong><span>Reklamsız, internetsiz çalışan namaz vakti ve kıble uygulaması.</span></div></a></li>
+    <li><a class="app" href="/dua/"><img src="ikonlar/dua.webp" alt="" width="64" height="64"><div><strong>Kur'an'da Geçen Dualar</strong><span>Arapça metin, okunuş ve anlamıyla Kur'an duaları.</span></div></a></li>
+    <li><a class="app" href="/kurandinle/"><img src="ikonlar/kurandinle.webp" alt="" width="64" height="64"><div><strong>Kur'ân-ı Kerîm ve Meâli</strong><span>Arapça tilâvet ve Türkçe meâl, 52 bölüm dinleme.</span></div></a></li>
+    <li><a class="app" href="https://sinerji.web.app/"><img src="ikonlar/sinerji.webp" alt="" width="64" height="64"><div><strong>Sinerji</strong><span>Ortak zikir halkası, hatim dağıtımı, dua ve kandil programları.</span><em>sinerji.web.app</em></div></a></li>
+    <li><a class="app" href="/Bereket/"><img src="ikonlar/bereket.webp" alt="" width="64" height="64"><div><strong>Bereket</strong><span>Zekât, nisap ve varlık takibi.</span></div></a></li>
+  </ul>
+
+  <h2>Harita ve keşif</h2>
+  <ul class="grid">
+    <li><a class="app" href="/zelzele/"><img src="ikonlar/zelzele.webp" alt="" width="64" height="64"><div><strong>Zelzele</strong><span>Türkiye depremlerini haritada anlık takip; AFAD ve Kandilli verisi.</span></div></a></li>
+    <li><a class="app" href="https://turbedar.org/"><img src="ikonlar/turbedar.webp" alt="" width="64" height="64"><div><strong>Türbedar</strong><span>Türbe, kümbet ve mezarların ortak haritası.</span><em>turbedar.org</em></div></a></li>
+    <li><a class="app" href="/patika/"><img src="ikonlar/patika.webp" alt="" width="64" height="64"><div><strong>Patika</strong><span>Rota ve aktivite takibi.</span></div></a></li>
+  </ul>
+
+  <h2>Defterler ve takip</h2>
+  <ul class="grid">
+    <li><a class="app" href="/borcdefteri/"><img src="ikonlar/borcdefteri.webp" alt="" width="64" height="64"><div><strong>Borç Defteri</strong><span>Borç ve alacaklarınızı takip edin.</span></div></a></li>
+    <li><a class="app" href="/hediyedefteri/"><img src="ikonlar/hediyedefteri.webp" alt="" width="64" height="64"><div><strong>Hediye Defteri</strong><span>Verilen ve alınan hediyelerin kaydı.</span></div></a></li>
+    <li><a class="app" href="/Fistakip/"><img src="ikonlar/fistakip.svg" alt="" width="64" height="64"><div><strong>FişTakip</strong><span>Fişin fotoğrafını çekin; mağaza, ürünler ve tutar kendiliğinden yazılsın.</span></div></a></li>
+    <li><a class="app" href="/firma/"><img src="ikonlar/firma.svg" alt="" width="64" height="64"><div><strong>Mutfak Listem</strong><span>Mutfak listesi.</span></div></a></li>
+    <li><a class="app" href="/stylish/"><img src="ikonlar/stylish.webp" alt="" width="64" height="64"><div><strong>STYLISh</strong><span>Kıyafetlerinizi saklayın, kendi dolabınızdan kombin oluşturun.</span></div></a></li>
+    <li><a class="app" href="https://izlence.web.app/"><img src="ikonlar/izlence.webp" alt="" width="64" height="64"><div><strong>İzlence</strong><span>Film günlüğü: takip, öneri ve analiz.</span><em>izlence.web.app</em></div></a></li>
+  </ul>
+
+  <h2>Tarım ve hayvancılık</h2>
+  <ul class="grid">
+    <li><a class="app" href="/beebook/"><img src="ikonlar/beebook.webp" alt="" width="64" height="64"><div><strong>Beebook</strong><span>Arıcının el defteri; arıcılar için yönetim uygulaması.</span></div></a></li>
+    <li><a class="app" href="/baldefterim/"><img src="ikonlar/baldefterim.webp" alt="" width="64" height="64"><div><strong>Bal Defterim</strong><span>Bal hasadı, sipariş, stok ve zekât takibi.</span></div></a></li>
+    <li><a class="app" href="/ciftligim/"><img src="ikonlar/ciftligim.webp" alt="" width="64" height="64"><div><strong>Çiftliğim</strong><span>Küçükbaş ve büyükbaş hayvancılık yönetimi.</span></div></a></li>
+  </ul>
+
+  <h2>Araçlar</h2>
+  <ul class="grid">
+    <li><a class="app" href="/soyagaci/"><img src="ikonlar/soyagaci.webp" alt="" width="64" height="64"><div><strong>Soy Ağacı</strong><span>Aile ağacınızı oluşturun ve görüntüleyin.</span></div></a></li>
+    <li><a class="app" href="/edevlet-ged/"><img src="ikonlar/edevlet-ged.webp" alt="" width="64" height="64"><div><strong>e-Devlet → GEDCOM</strong><span>e-Devlet soyağacı belgesini GEDCOM dosyasına çevirir.</span></div></a></li>
+    <li><a class="app" href="/cekici/"><img src="ikonlar/cekici.webp" alt="" width="64" height="64"><div><strong>Çekici</strong><span>YouTube, Instagram ve X videolarını indirin.</span></div></a></li>
+    <li><a class="app" href="/Youtubeanalist/"><img src="ikonlar/youtubeanalist.svg" alt="" width="64" height="64"><div><strong>Kanal Mercek</strong><span>YouTube kanal ve video analizi.</span></div></a></li>
+    <li><a class="app" href="/kontrol/"><img src="ikonlar/kontrol.svg" alt="" width="64" height="64"><div><strong>Bulut Envanteri</strong><span>Cloud projeleri ve Firestore temizliği.</span></div></a></li>
+  </ul>
+
+  <footer>
+    © Kamil Saim · <a href="https://github.com/kamilsaim">GitHub</a>
+  </footer>
+</main>
+</body>
+</html>
